@@ -80,13 +80,13 @@ const createTask = asyncHandler(async (req, res) => {
 // Get all tasks
 const allTasks = asyncHandler(async (req, res) => {
     // Find all tasks
-    const tasks = await Task.find();
+    const tasks = await Task.find({});
     // If no tasks found, return a message
     if (tasks.length == 0) {
         res.send("No tasks found");
     } else {
         // Return all tasks
-        res.status(200).json(tasks);
+        res.status(200).json({ Message: "All tasks are: ", Tasks: tasks });
     }
 });
 

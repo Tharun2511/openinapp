@@ -209,7 +209,7 @@ const UpdateSubTask = asyncHandler(async (req, res) => {
         const completed = passedStatus == 1 ? " and completed" : "";
         res.json({
             Message: "Subtask Updated Succesfully",
-            NewSubTask: subTask,
+            UpdatedSubTask: subTask,
         });
     } catch (error) {
         res.status(400);

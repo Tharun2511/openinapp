@@ -114,6 +114,7 @@ const callUser = asyncHandler(async (req, res) => {
             res.json({ Messgae: "Outdated tasks have been called" });
         }
     } catch (error) {
+        res.json({ Messgae: "There are no outdated tasks or try again later" });
         throw new Error("There are no outdated tasks or try again later");
     }
 });
